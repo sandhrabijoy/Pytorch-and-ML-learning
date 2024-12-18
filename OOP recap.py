@@ -25,6 +25,9 @@ class Microwave:
             print('Microwave needs to be turned on for it to run')
     def __add__(self,other):
         return f'{self.brand}+{other.brand}' 
+    def __str__(self)->str:
+        return f'{self.brand}(Rating:{self.power_rating})'
+     
 
 smeg:Microwave=Microwave(brand='Smeg',power_rating='B')
 smeg.turn_on()
@@ -36,3 +39,4 @@ bosch.run(50)
 bosch.turn_on
 bosch.turn_off()
 print(smeg+bosch)
+print(smeg)
