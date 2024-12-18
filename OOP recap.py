@@ -27,6 +27,8 @@ class Microwave:
         return f'{self.brand}+{other.brand}' 
     def __str__(self)->str:
         return f'{self.brand}(Rating:{self.power_rating})'
+    def __repr__(self)->str:
+        return f'Microwave(brand="{self.brand}",power_rating="{self.power_rating}")'
      
 
 smeg:Microwave=Microwave(brand='Smeg',power_rating='B')
@@ -40,3 +42,4 @@ bosch.turn_on
 bosch.turn_off()
 print(smeg+bosch)
 print(smeg)
+print(repr(smeg))
