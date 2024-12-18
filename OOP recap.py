@@ -23,6 +23,8 @@ class Microwave:
             print(f'Microwave({self.brand})for {seconds} seconds')
         else:
             print('Microwave needs to be turned on for it to run')
+    def __add__(self,other):
+        return f'{self.brand}+{other.brand}' 
 
 smeg:Microwave=Microwave(brand='Smeg',power_rating='B')
 smeg.turn_on()
@@ -33,3 +35,4 @@ bosch.turn_on()
 bosch.run(50)
 bosch.turn_on
 bosch.turn_off()
+print(smeg+bosch)
